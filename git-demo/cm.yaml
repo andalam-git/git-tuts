@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: configMap-mongodb
+spec:
+  template:
+    labels: configMap-mongodb
+    tier: db
+  spec: 
+    conatainers:
+    - name: Mongodb
+      image: mongodb:1.10
+data:
+  baseUrl: https://cloud.mongodb.com 
