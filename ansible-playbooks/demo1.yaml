@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: sesh
+  tasks:
+  - name: INstall software packages
+    shell: |
+      yum install httpd
+      yum install vim
+      yum install ntp
+    register: output
+  - debug:
+      msg: "{{ output.stdout }}"
+   

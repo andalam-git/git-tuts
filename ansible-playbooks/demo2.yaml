@@ -1,0 +1,7 @@
+---
+- hosts: demo-node
+  remote_user: sesh
+  tasks:
+  - name: Install dnf package 
+    shell: yum install dnf
+
